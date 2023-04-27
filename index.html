@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>img{
+        width: 100%;
+        height: 250px;
+    }
+    .darkmode{
+        color: white;
+        background-color: black;
+    }</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col mt-3">
+                <div style="display: flex;"><i class="fas fa-cart-plus" style="font-size: 45px; color:red;"></i>
+                    <div class="topWord">
+                        <div>daily Shop</div>
+                        <div style="font-size: 18px;"><b> YOUR SHOPPING PARTNER</b></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-4" style="font-size: 25px;">
+                <input type="search" name="" id="input" placeholder="Search here ex man" onkeyup='search()'>
+                <button><i class="fas fa-search-plus text-danger" style="font-size: 20px;" onclick="search()"></i></button>
+            </div>
+            <div class="col">
+                <i class="fas fa-shopping-basket text-danger" style="font-size: 40px;" onclick="transfer()"><sup id="count">0</sup></i>
+                <div style="font-size:18px;"><b> SHOPPING CART</b></div>
+            </div>
+        </div>
+     </div>
+                <nav class="navbar navbar-expand-sm  navbar-light sticky-top" style="background-color: red;z-index:1;">
+                  <div class="container-fluid">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                         <span class="navbar-toggler-icon"></span>
+                      </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="cart.html">PRODUCTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="payment.html">PAYMENT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="contact.html">CONTACT</a>
+                            </li>
+                        </ul>
+                        <div class="toggle" style="margin-left: 500px;">
+                            <i class="fas fa-lightbulb" id="bulb" onclick="change()" style="color: white; font-size: 25px;"></i>
+                        </div>
+                    </div>
+                  </div>
+                </nav>
+    <div id="message" class="sticky-top" style="z-index: 1; top:40px;"></div>
+    <div class="container-fluid" id="bgImg">
+        <div class="row">
+            <div class="col">
+                <div id="bgText" style="font-size: 30px; margin-top:2%;" class="text-center mx-auto text-danger"><b>SHOPPING MADE EASY AND AFFORDABLE WITH RealMinTech</b></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="container">
+        <div class="row">
+            <div class="col">
+                <div style="font-size: 25px; margin-left: 3%;">
+                    <p class="text-danger" ><b> Category</b></p>
+                    <hr style="color:red;font-size:20px;">
+                    <p>Wears</p>
+                    <p>Furniture</p>
+                    <p>Phones</p>
+                    <p>Novels</p>
+                    <p>Toys</p>
+                </div>
+                <div style="font-size: 25px; margin-left: 3%;">
+                    <p class="text-danger" ><b> Tags</b></p>
+                    <hr style="color:red;font-size:20px;">
+                    <p>Kids</p>
+                    <p>Accessories</p>
+                    <p>Books</p>
+                    <p>Interiors</p>
+                </div>
+                <div style="font-size: 25px; margin-left: 3%;">
+                    <p class="text-danger" ><b> Shop By Price</b></p>
+                    <hr style="color:red;font-size:20px;">
+                    <button class="btn btn-danger">#5,00- #1,</button>
+                    <button class="btn btn-danger">#1,- #5,</button>
+                    <button class="btn btn-danger">#5,- #10,</button>
+                    <button class="btn btn-danger">#10, and Above</button>
+                </div>
+                <div style="font-size: 25px; margin-left: 3%;">
+                    <p class="text-danger" ><b> Shop By Color</b></p>
+                    <hr style="color:red;font-size:20px;">
+                    <button type="button" class="btn-warning btn-lg"></button>
+                    <button class="btn-primary btn-lg"></button>
+                    <button class="btn-success btn-lg"></button>
+                    <button class="btn-dark btn-lg"></button>
+                    <button class="btn-secondary btn-lg"></button>
+                    <button class="btn-info btn-lg"></button>
+                    <br>
+                    <button type="button" class="btn  btn-lg" style="background-color:navy;"></button>
+                    <button class="btn  btn-lg" style="background-color:purple;"></button>
+                    <button class="btn  btn-lg" style="background-color:maroon;"></button>
+                    <button class="btn  btn-lg" style="background-color:goldenrod;"></button>
+                    <button class="btn  btn-lg" style="background-color:orangered"></button>
+                    <button class="btn  btn-lg" style="background-color:green;"></button>
+                </div>
+                <div>
+                    <div style="font-size: 25px; margin-left: 3%;">
+                        <p class="text-danger" ><b>Recently Viewed</b></p>
+                        <hr style="color:red;font-size:20px;">
+                        <div>
+                          <img src="images/chair3.jpg" alt="images/chair3.jpg" style="width:100% ;">
+                        </div>
+                        <div>
+                          <img src="images/kidstoy7.jpg" alt="images/kidstoy7.jpg" style="width:100% ;">
+                        </div>
+                        <div>
+                          <img src="images/books-1141911__340.jpg" alt="images/books-1141911__340.jpg" style="width:100% ;">
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+            <div class="col mt-3" style="font-size: 20px;">
+                <div>
+                    <p>
+                        <input type="text" placeholder="Age 2-5" style="font-size: 20px;"> 
+                    </p>
+                </div>
+                <div>
+                    <img src="images/kidbaby-84552__340.webp" alt="images/kidbaby-84552__340.webp">
+                    <p>Classic Kids Toy</p>
+                    <p>#4500</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;" onclick="addup(this)" >ADD TO CART</button>
+                </div>
+                <div>
+                    <img src="images/kidstoy3.jpg" alt="images/kidstoy3.jpg">
+                    <p>Fur Horse</p>
+                    <p>#2500</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;" onclick="addup(this)">ADD TO CART</button>
+                </div>
+                <div>
+                    <img src="images/kidstoy4.jpg" alt="images/kidstoy4.jpg">
+                    <p>Execlusive Toy Set</p>
+                    <p>#12000</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;"onclick="addup(this)">ADD TO CART</button>
+                </div>
+                <div>
+                    <img src="images/kidstoy5.jpg" alt="images/kidstoy5.jpg">
+                    <p>Bubble Up</p>
+                    <p>#1050</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;" onclick="addup(this)" >ADD TO CART</button>
+                </div>
+            </div>
+            <div class="col mt-3" style="font-size: 20px;">
+                <div>
+                    <p>
+                        <input type="text" placeholder="Age 6-15" style="font-size: 20px;"> 
+                    </p>
+                </div>
+                <div>
+                    <img src="images/boot-7288667__340.jpg" alt="images/boot-7288667__340.jpg">
+                    <p>TimberLand</p>
+                    <p>#9000</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;"onclick="addup(this)">ADD TO CART</button>
+                </div>
+                <div>
+                    <img src="images/boot2.jpg" alt="images/boot2.jpg">
+                    <p>Sport Sneakers</p>
+                    <p>#6200</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;" onclick="addup(this)">ADD TO CART</button>
+                </div>
+                <div>
+                    <img src="images/boot3.jpg" alt="images/boot3.jpg">
+                    <p>Unisex Trainers</p>
+                    <p>#12000</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;" onclick="addup(this)">ADD TO CART</button>
+                </div>
+                <div>
+                    <img src="images/boot5.jpg" alt="images/boot5.jpg">
+                    <p>Combo Sport Kit</p>
+                    <p>#15100</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;" onclick="addup(this)">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="col mt-3" style="font-size: 20px;">
+                <div>
+                    <p>
+                        <input type="text" placeholder="Age 16 and Above" style="font-size: 20px;"> 
+                    </p>
+                </div>
+                <div>
+                    <img src="images/winter-wear-6995740__340.webp" alt="images/winter-wear-6995740__340.webp">
+                    <p>Winter Shoe And Glove</p>
+                    <p>#17890</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;" onclick="addup(this)">ADD TO CART</button>
+                </div>
+                <div>
+                    <img src="images/winter.jpg" alt="images/winter.jpg">
+                    <p>Complete Cold Kit</p>
+                    <p>#22679</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;" onclick="addup(this)">ADD TO CART</button>
+                </div>
+                <div>
+                    <img src="images/winter2.jpg" alt="images/winter2.jpg">
+                    <p>Cotton Cardigan</p>
+                    <p>#7200</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;" onclick="addup(this)">ADD TO CART</button>
+                </div>
+                <div>
+                    <img src="images/winter3.jpg" alt="images/winter3.jpg">
+                    <p>Mother And Son Winter Kit</p>
+                    <p>#19145</p>
+                    <button class=" btn bg-danger text-white" style="font-size: 20px;" onclick="addup(this)">ADD TO CART</button>
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col" >
+              <ul class="pagination d-flex justify-content-center " style="margin-top: 5%;">
+                  <li class="page-item "><a href="contact.html" class="page-link text-white bg-danger">&laquo;</a></li>
+                  <li class="page-item"><a href="index.html" class="page-link text-white bg-danger">1</a></li>
+                  <li class="page-item"><a href="cart.html" class="page-link text-white bg-danger">2</a></li>
+                  <li class="page-item"><a href="payment.html" class="page-link text-white bg-danger">3</a></li>
+                  <li class="page-item"><a href="contact.html" class="page-link text-white bg-danger">4</a></li>
+                  <li class="page-item"><a href="index.html" class="page-link text-white bg-danger">&raquo;</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-dark text-white">
+        <div class="row">
+          <div class="col">
+            <h3>Main Menu</h3>
+            <p>Home</p>
+            <p>Our Service</p>
+            <p>Our Products</p>
+            <p>About Us</p>
+            <p>Contact Us</p>
+          </div>
+          <div class="col">
+            <h3>Knowlegde Base</h3>
+            <p>Deliver</p>
+            <p>Return</p>
+            <p>Service</p>
+            <p>Discount</p>
+            <p>Special Offer</p>
+          </div>
+          <div class="col">
+            <h3>Useful Link</h3>
+            <p>Site Map </p>
+            <p>Search</p>
+            <p>Servive</p>
+            <p>Discount</p>
+            <p>Review</p>
+          </div>
+          <div class="col">
+            <h3>CONTACT US</h3>
+            <p>12,Osunbukola street, Dada estate, Osogbo.</p>
+            <p><i class="fas fa-phone-alt"></i>08133433956</p>
+            <p><i class="fas fa-envelope"></i>Adesinamariam7@gmail.com</p>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+           
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+</body>
+</html>

@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.darkmode{
+    color: white;
+    background-color: black;
+}
+
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.flex1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.combo{
+    display: flex;
+}
+.text h1{
+    color: navy;
+    text-shadow: 10px 0 20px navy;
+}
+#ryt{
+    padding-top: 10px;
+}
+.flex2{
+    padding-top: 20px;
+}
+.combo2{
+    display: flex;
+    padding-top: 10px;
+}
+.combo2 i{
+    padding-top: 1px;
+}
+.combo2 h3{
+    padding-top: 9px;
+}
+.navbar{
+    background-color:red;
+    color:white;
+    padding-top: 1%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    color: white;
+}
+ a{
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+}
+#wears, #furniture, #phone, #novels{
+    background: rgb(247, 7, 7);
+    background: rgba(104, 31, 240, 0.151);
+}
+body{
+    background-color:gray;
+}
+.bg{
+    width: 100%;
+    margin-top: 0;
+    height: 500px;
+    padding-top: 1%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url('../images/konigssee-g93b0a3fb1_1920.jpg');
+}
+#bgImg{
+    margin-top: 0;
+    padding-top: 1%;
+    background-image: url(../images/photographer-gb9183c5c5_1280.jpg);
+    width: 100%;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+}
+#bgText{
+    background: rgb(247, 245, 245); 
+    width: 100%;
+    background: rgba(250, 248, 248, 0.815); 
+}
+.text{
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    color: navy;
+    background: rgb(247, 245, 245); 
+    width: 100%;
+    background: rgba(250, 248, 248, 0.815); 
+}
+.together{
+   border: 1px solid wheat;
+   width: 90%;
+   height: 100%;
+   margin-top:3%;
+   margin-left: 5%;
+   margin-right: 5%;
+   background-color: white;
+}
+.over{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 5%;
+}
+iframe{
+    /* margin: auto; */
+    width:100%;
+}
+.center{
+    text-align: center;
+    margin: 20px;
+}
+.place{
+    width:50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 30px;
+}
+
+.place> input{
+    margin-bottom: 20px;
+}
+.daily{
+    float:left;
+    width:50%;
+}
+.daily h3{
+    text-align: center;
+}
+.flexible{
+    display: flex;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.news{
+    text-align: center;
+    background-color: white;
+    margin-top: 25px;
+}
+.sub{
+    background-color: black;
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.sub a{
+    text-decoration: none;
+    display: block;
+}
+.sub h1{
+    margin-top: 25px;
+}
+.bake1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bake2{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+.bake3{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+.bake4{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+.plenty{
+    background-color: white; 
+    width:100%;
+    height:2000px;
+    margin: 0;   
+}
+.pagination > a{
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    align-items: center;
+    background-color: red;
+}
+.pagination{
+    justify-content: center;
+    text-align: center;
+}
+.category ,.tags, .price , .color , .recent{
+    margin:5%;
+}
+.price> hr, .color> hr{
+    padding:5px ;
+}
+.color > input{
+    margin-bottom:10px;
+}
+.recent img{
+    width:150px;
+    height: 120px;
+}
+.top img{
+    width:150px;
+    height: 120px;
+}
+.top p{
+    top:0;
+}
+.styles{
+    width:60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.styles img{
+    width:70%;
+    height: 200px;
+    margin-right: 20px;
+}
+.every{
+    display:flex;
+    background-color: white;
+}
+button{
+    background-color:red;
+    color: white;
+}
+#Pbtn{
+    background-color: white;
+    box-shadow: 10px 0 5px 0 navy;
+    border-radius: 20px;
+}
+#Pbtn button{
+    border-radius: 10px;
+    font-size: 20px;
+}
+@media(max-width:768px){
+    .flexible{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 26px 30px ;
+    }
+}

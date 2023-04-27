@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="combo">
+                     <i id="ryt" class="fas fa-shopping-cart" style="font-size: 30px;color:red"></i>
+                    <div class="flex1">       
+                        <h3 class="shift">daily Shop <br>YOUR SHOPPING PARTNER</h3>
+                     </div>
+                </div>  
+            </div>
+            <div class="col"> 
+                    <div class="flex2">
+                        <input type="text" placeholder="search here ex man"><button><i style="font-size:10pxpx ;color:red" class="fas fa-search"></i></button>
+                    </div>
+            </div>
+            <div class="col">
+                <div class="combo2">
+                     <i style="font-size:30px ;color:red" class="fas fa-shopping-basket" onclick="transfer()"><sup id="count">0</sup></a></i>
+                     <div class="flex3">
+                     <h3>SHOPPING CART</h3>
+                     </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-sm  navbar-light sticky-top" style="background-color: red;z-index:1;">
+        <div class="container-fluid" >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                  <li class="nav-item ">
+                      <a class="nav-link text-white" href="index.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="cart.html">PRODUCTS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="payment.html">PAYMENT</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="contact.html">CONTACT</a>
+                  </li>
+              </ul>
+              <div class="toggle" style="margin-left: 500px;">
+                <i class="fas fa-lightbulb" id="bulb" onclick="change()" style="color: white; font-size: 25px;"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="message" class="sticky-top" style="z-index: 1; top:40px;"></div>
+<div class="container-fluid" id="first">
+    <div class="row">
+        <div id="wears"  style="font-size: 30px; text-align: center ;">WEARS</div>
+        <div class="col">
+            <div>
+                <img src="images/cap-7278216__340.webp" alt="images/cap-7278216__340.webp" style=" width: 200px;
+                height: 200px;">
+            </div>
+            <div>
+               <p id="Pname">Light Shoe</p>
+               <p id="Pprice">#5670</p>
+               <button onclick="addup(this)">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="col">        
+            <div>
+                <img src="images/istockphoto-1062148914-170667a.jpg" alt="images/istockphoto-1062148914-170667a.jpg" style=" width: 200px;
+                height: 200px;">
+               <p id="Pname">Hoodie Up and Down</p>
+               <p id="Pprice">#12700</p>
+               <button onclick="addup(this)">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <img src="images/costume-2269372__340.jpg" alt="images/costume-2269372__340.jpg" style=" width: 200px;
+                height: 200px;">
+               <p id="Pname">Custom</p>
+               <p id="Pprice">#2200</p>
+               <button onclick="addup(this)">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="col">
+            
+            <div>
+                <img src="images/suits-me-online-6191399__340.jpg" alt="images/suits-me-online-6191399__340.jpg" style=" width: 200px;
+                height: 200px;">
+               <p id="Pname">Indian Kaftan</p>
+               <p id="Pprice">#20000</p>
+               <button onclick="addup(this)">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="col">
+            
+            <div>
+                <img src="images/pumps-2364722__340.webp" alt="images/pumps-2364722__340.webp" style=" width: 200px;
+                height: 200px;">
+               <p id="Pname">Lady's Shoe</p>
+               <p id="Pprice">#13090</p>
+               <button onclick="addup(this)">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid mt-5" id="first">
+    <div id="Furniture" style="font-size: 30px; text-align: center ;">FURNITURE</div>
+<div class="row">
+    <div class="col">
+        <div>
+            <img src="images/chair5.jpg" alt="images/chair5.jpg" style=" width: 200px;
+            height: 200px;">
+           <p id="Pname">Complete Indoor Furniture</p>
+           <p id="Pprice">#105700</p>
+           <button onclick="addup(this)">ADD TO CART</button>
+        </div>
+    </div>
+    <div class="col">
+        <div>
+            <img src="images/chair4.jpg" alt="images/chair4.jpg" style=" width: 200px;
+            height: 200px;">
+           <p id="Pname">Fur Chair</p>
+           <p id="Pprice">#61000</p>
+           <button onclick="addup(this)">ADD TO CART</button>
+        </div>
+    </div>
+    <div class="col">
+       
+        <div>
+            <img src="images/chair3.jpg" alt="images/chair3.jpg" style=" width: 200px;
+            height: 200px;">
+           <p id="Pname">Sofa</p>
+           <p id="Pprice">#23050</p>
+           <button onclick="addup(this)">ADD TO CART</button>
+        </div>
+    </div>
+    <div class="col">
+        <div>
+            <img src="images/chair2.jpg" alt="images/chair2.jpg" style=" width: 200px;
+            height: 200px;">
+           <p id="Pname">Insulated water bottle</p>
+           <p id="Pprice">#42500</p>
+           <button onclick="addup(this)">ADD TO CART</button>
+        </div>
+    </div>
+    <div class="col">
+        <div>
+            <img src="images/chair-4281511_960_720.webp" alt="images/chair-4281511_960_720.webp" style=" width: 200px;
+            height: 200px;">
+           <p id="Pname">Executive Chair</p>
+           <p id="Pprice">#27000</p>
+           <button onclick="addup(this)">ADD TO CART</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div id="phone" style="font-size: 30px; text-align: center;">PHONES</div>
+        <div class="col">
+            <div>
+                <img src="images/samsung.webp" alt="images/samsung.webp" style=" width: 200px;">
+                <p id="Psamsung">Samsung Phone</p>
+                <p id="Pprice11">#87000</p>
+                <button onclick="addup(this)">ADD TO CART</button>
+             </div>
+        </div>
+        <div class="col">
+            <div>
+                <img src="images/ipone.jpg" alt="images/ipone.jpg" style=" width: 200px;">
+                <p id="Psamsung">Iphone</p>
+                <p id="Pprice11">#75000</p>
+                <button onclick="addup(this)">ADD TO CART</button>
+             </div>
+        </div>
+        <div class="col">
+            <div>
+                <img src="images/tab.jpg" alt="images/tab.jpg" style=" width: 200px;">
+                <p id="Ptab">Tab</p>
+                <p id="Pprice12">#135000</p>
+                <button onclick="addup(this)">ADD TO CART</button>
+             </div>
+        </div>
+        <div class="col">
+            <div>
+                <img src="images/imac.webp" alt="images/imac.webp" style=" width: 200px;">
+                <p id="Pmac">Mac Phone</p>
+                <p id="Pprice11">#200000</p>
+                <button onclick="addup(this)">ADD TO CART</button>
+             </div>
+        </div>
+        <div class="col">
+        
+            <div>
+                <img src="images/photographer-gb9183c5c5_1280.jpg" alt="images/photographer-gb9183c5c5_1280.jpg" style=" width: 200px;">
+                <p id="Pmac">Camera</p>
+                <p id="Pprice11">#26000</p>
+                <button onclick="addup(this)">ADD TO CART</button>
+             </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div id="novels" style="font-size: 30px; text-align: center;">NOVELS</div>
+        <div class="col">
+         
+            <div>
+                <img src="images/book-2795850__340.webp" alt="images/book-2795850__340.webp" style=" width: 200px;">
+                <p id="Pmac">Novel by Jens</p>
+                <p id="Pprice11">#6000</p>
+                <button onclick="addup(this)">ADD TO CART</button>
+             </div>
+        </div>
+        <div class="col">
+          >
+            <div>
+                <img src="images/book2__340.jpg" alt="images/book2__340.jpg" style=" width: 200px;">
+                <p id="Pmac">Novel by Stone</p>
+                <p id="Pprice11">#3500</p>
+                <button onclick="addup(this)">ADD TO CART</button>
+             </div>
+        </div>
+        <div class="col">
+            <div>
+               
+            </div>
+            <div>
+                <img src="images/bookcase-1845888__340.jpg" alt="images/bookcase-1845888__340.jpg" style=" width: 200px;">
+                <p id="Pmac">Novel mySchool</p>
+                <p id="Pprice11">#12000</p>
+                <button onclick="addup(this)">ADD TO CART</button>
+             </div>
+        </div>
+        <div class="col">
+            <div>
+                <img src="images/comics-1239698__340.jpg" alt="images/comics-1239698__340.jpg" style=" width: 200px;">
+                <p id="Pmac">Comics for Children</p>
+                <p id="Pprice11">#2400</p>
+                <button onclick="addup(this)">ADD TO CART</button>
+             </div>
+        </div>
+        <div class="col">
+  
+            <div>
+                <img src="images/reading-4020015__340.jpg" alt="images/reading-4020015__340.jpg" style=" width: 200px;">
+                <p id="Pmac">Book of Life</p>
+                <p id="Pprice11">#4500</p>
+                <button onclick="addup(this)">ADD TO CART</button>
+             </div>
+        </div>
+    </div>
+</div>
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="index.html" class="active">1</a>
+    <a href="cart.html">2</a>
+    <a href="payment.html">3</a>
+    <a href="contact.html">4</a>
+    <a href="#">&raquo;</a>
+</div>
+<div class="news">
+    <h1>SUBSCRIBE OUR NEWSLETTER</h1>
+    <P>Lorem ipsum dolor sit amet  exercitationem qui veritatis quo porro.</P>
+    <input type="text" name="" id="" placeholder="Enter your name" style="width:250px ; height:20px;" >
+    <input type="submit" value="Subcribe" style="color:red">
+</div>
+<section class="sub">
+  <div class="main">
+     <h1>Main Menu</h1>
+     <a href="index.html">Home</a>
+     <a href="#">Our services</a>
+     <a href="cart.html">Our Products</a>
+     <a href="#">About us</a>
+     <a href="#">Contact Us</a>
+     <p>Designed by RealMinTech</p>
+  </div>
+  <div class="know">
+     <h1>Knowledge Base</h1>
+      <a href="#">Delivery</a>
+      <a href="#">Returns</a>
+      <a href="#">Services</a>
+      <a href="#">Discount</a>
+      <a href="#">Special offer</a>
+  </div>
+  <div class="use">
+     <h1>Useful Links</h1>
+     <a href="#">Site Map</a>
+     <a href="#">Search</a>
+     <a href="#">Services</a>
+     <a href="#">Discount</a>
+     <a href="#">Special offer</a>
+ </div>
+ <div class="US">
+     <h1>Contact Us</h1>
+     <p>12,Osunbukola street,Dada estate.Osogbo</p>
+     <i class="fas fa-phone">08133433956</i>
+     <i class="fas fa-envelope">Adesinamariam7@gmail.com</i>
+     <i class="fab fa-facebook-f"></i>
+     <i class="fab fa-twitter"></i>
+     <i class="fab fa-google-plus"></i>
+     <i class="fab fa-youtube"></i>
+ </div>
+</section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
